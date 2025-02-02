@@ -48,7 +48,7 @@ const NavBar = () => {
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex gap-6 text-lg font-medium">
+        <div  className="hidden lg:flex gap-6 text-lg font-medium">
           {["Home", "About", "Skill", "Project", "Contact"].map((item) => (
             <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-gray-300">
               {item}
