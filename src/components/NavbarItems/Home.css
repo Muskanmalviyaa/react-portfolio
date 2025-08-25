@@ -43,8 +43,8 @@
   /* Right Section - Image Container */
   .img-container {
   position: relative;
-  width: 70vw;   /* Big for mobile */
-  height: 70vw;
+  width: 60vw;   /* Big for mobile */
+  height: 60vw;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
