@@ -1,0 +1,78 @@
+/* Hero Section */
+.hero {
+    position: relative;
+  }
+  
+  /* Left Section */
+  .hero-left {
+    width: 100%;
+  }
+  
+  @media (min-width: 1024px) {
+    .hero-left {
+      width: 50%;
+    }
+  }
+  
+  /* Animated Background Text */
+  @keyframes slide {
+    0% { transform: translateX(-10px); opacity: 0.7; }
+    50% { transform: translateX(10px); opacity: 1; }
+    100% { transform: translateX(-10px); opacity: 0.7; }
+  }
+  
+  .animate-slide {
+    animation: slide 4s infinite ease-in-out alternate;
+  }
+  
+  /* "Hire Me" Button */
+  .hireme-btn {
+    background-color: #4c44b3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  
+  .hireme-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(76, 68, 179, 0.5);
+  }
+  
+  /* Right Section - Image Container */
+  .img-container {
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    max-width: 25vw;
+    max-height: 25vw;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  /* Animated Border */
+  .border-animate {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    animation: border-glow 3s linear infinite;
+  }
+  
+  @keyframes border-glow {
+    0% { border-color: rgba(76, 68, 179, 0.2); }
+    50% { border-color: rgba(76, 68, 179, 0.8); }
+    100% { border-color: rgba(76, 68, 179, 0.2); }
+  }
+  

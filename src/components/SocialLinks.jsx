@@ -10,7 +10,7 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-3">
       {links.map(({ href, icon }, index) => (
         <motion.a
           key={index}
