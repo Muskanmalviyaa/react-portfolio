@@ -38,14 +38,14 @@ const Home = () => {
         <a
           href="/Resume.pdf" // Path to your resume in the public folder
           download="Resume.pdf" // Optional: Custom filename for download
-          className="hireme-btn relative mt-5 overflow-hidden px-6 py-2 text-[#231e45] font-semibold text-[16px] border-2 border-[#231e45] shadow-md bg-[#F5EFFF] transition-all duration-800 ease-in-out before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[#231e45] before:scale-x-0 before:origin-left before:transition-transform before:duration-700 hover:text-white hover:before:scale-x-100"
+          className="hireme-btn relative mt-4 overflow-hidden px-6 py-2 text-[#231e45] font-semibold text-[16px] border-2 border-[#231e45] shadow-md bg-[#F5EFFF] transition-all duration-800 ease-in-out before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[#231e45] before:scale-x-0 before:origin-left before:transition-transform before:duration-700 hover:text-white hover:before:scale-x-100"
         >
           <span className="relative z-10"> Resume </span>
         </a>
       </div>
 
       {/* Right Section */}
-      <div className="hero-right relative w-4/5 sm:w-2/3 lg:w-1/2 h-auto flex justify-center lg:justify-end order-1 sm:order-1 lg:order-2 mt-6 sm:mt-10 lg:mt-0">
+      <div className="hero-right relative w-4/5 sm:w-2/3 lg:w-1/2 h-auto flex justify-center lg:justify-end order-1 sm:order-1 lg:order-2 mt-0 sm:mt-6 lg:mt-0">
         <div className="img-wrapper relative flex justify-center items-center">
           <div className="img-container w-full sm:w-3/4 lg:w-auto">
             <div className="border-animate"></div>

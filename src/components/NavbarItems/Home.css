@@ -42,18 +42,37 @@
   
   /* Right Section - Image Container */
   .img-container {
-    position: relative;
+  position: relative;
+  width: 70vw;   /* Big for mobile */
+  height: 70vw;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {  /* tablets */
+  .img-container {
     width: 50vw;
     height: 50vw;
-    max-width: 25vw;
-    max-height: 25vw;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
-  
+}
+
+@media (min-width: 1024px) {  /* desktop */
+  .img-container {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
   .profile-img {
     width: 100%;
     height: 100%;
@@ -66,7 +85,7 @@
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    border: 5px solid transparent;
+    border: 6px solid transparent;
     animation: border-glow 3s linear infinite;
   }
   
