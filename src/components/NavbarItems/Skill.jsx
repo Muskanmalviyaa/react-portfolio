@@ -1,5 +1,5 @@
-import "aos/dist/aos.css";
 import Tilt from "react-parallax-tilt";
+import { motion } from "framer-motion";
 
 import {
   FaReact,
@@ -9,7 +9,7 @@ import {
   FaGithub,
   FaJs,
 } from "react-icons/fa";
-import { SiTailwindcss, SiPostman, SiCplusplus } from "react-icons/si";
+import { SiTailwindcss, SiPostman, SiPython } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 
 const skills = [
@@ -25,47 +25,72 @@ const skills = [
   { name: "GitHub", icon: <FaGithub className="text-black" /> },
   { name: "Git", icon: <FaGitAlt className="text-red-500" /> },
   { name: "Postman", icon: <SiPostman className="text-orange-400" /> },
-  { name: "C++", icon: <SiCplusplus className="text-blue-800" /> },
+  { name: "Python", icon: <SiPython className="text-blue-500" /> },
 ];
+
+const staggerContainer = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { type: "spring", duration: 1.25 } },
+};
+
+const zoomInSkill = {
+  hidden: { opacity: 0, scale: 0.5 },
+  show: { opacity: 1, scale: 1, transition: { type: "spring", duration: 1 } },
+};
 
 const Skill = () => {
   return (
-    <section id="skills" className="py-20">
+    <motion.section
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+      id="skills"
+      className="py-20 relative z-10"
+    >
       <div className="container mx-auto px-4">
-        <h2
-          className="text-4xl font-bold text-center text-[#0f1442] mb-16"
-          data-aos="fade-down"
+        <motion.h2
+          variants={fadeIn}
+          className="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#938bd1] to-[#ffffff] text-center mb-16"
         >
           Professional Skillset
-        </h2>
+        </motion.h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 place-items-center">
           {skills.map((skill, index) => (
-            <Tilt
-              key={index}
-              tiltMaxAngleX={20}
-              tiltMaxAngleY={20}
-              scale={1.1}
-              transitionSpeed={600}
-              className="w-34 h-34"
-            >
-              <div
-                data-aos="zoom-in"
-                data-aos-delay={index * 100}
-                className="w-full h-full flex flex-col items-center justify-center text-center rounded-xl transform transition-transform duration-500 hover:scale-110 hover:-rotate-1 hover:shadow-[0_10px_25px_rgba(0,0,0,0.2)] bg-transparent"
+            <motion.div variants={zoomInSkill} key={index}>
+              <Tilt
+                tiltMaxAngleX={20}
+                tiltMaxAngleY={20}
+                scale={1.1}
+                transitionSpeed={600}
+                className="w-34 h-34"
               >
-                <div className="text-6xl mb-2 transition-all duration-600">
-                  {skill.icon}
+                <div
+                  className="w-full h-full flex flex-col items-center justify-center text-center p-6 rounded-2xl border border-[#ffffff1a] shadow-[0_0_20px_rgba(147,139,209,0.1)] transform transition-transform duration-500 hover:scale-110 hover:-rotate-1 hover:shadow-[0_0_30px_rgba(147,139,209,0.4)] bg-[#1e1a38]/60 backdrop-blur-md"
+                >
+                  <div className="text-6xl mb-4 transition-all duration-600 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">
+                    {skill.icon}
+                  </div>
+                  <p className="text-md font-semibold text-gray-200 tracking-wide">
+                    {skill.name}
+                  </p>
                 </div>
-                <p className="text-md font-semibold text-[#0f1442]">
-                  {skill.name}
-                </p>
-              </div>
-            </Tilt>
+              </Tilt>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

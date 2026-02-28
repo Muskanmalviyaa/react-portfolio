@@ -2,14 +2,14 @@
 
 // function Education() {
 //   return (
-  //   )
-  // }
-  
-  // export default Education
+//   )
+// }
+
+// export default Education
 // import React from 'react';
 
 // const Education = () => {
-  //   const educationData = [
+//   const educationData = [
 //     {
 //       institution: "University of Example",
 //       degree: "Bachelor of Science in Computer Science",
@@ -18,8 +18,8 @@
 //       location: "New York, USA",
 //     },
 //     {
-  //       institution: "Example High School",
-  //       degree: "High School Diploma",
+//       institution: "Example High School",
+//       degree: "High School Diploma",
 //       duration: "Aug 2014 - May 2018",
 //       courses: "Mathematics, Physics, Computer Science",
 //       location: "California, USA",
@@ -27,21 +27,21 @@
 //   ];
 
 //   return (
-  //     <section id="education" className="bg-[#231e45] text-[#fcfcfd] py-12">
+//     <section id="education" className="bg-[#231e45] text-[#fcfcfd] py-12">
 //       <div className="container mx-auto px-4">
 //         <h2 className="text-3xl font-bold text-center mb-8">Education</h2>
 //         <div className="space-y-8">
 //           {educationData.map((edu, index) => (
-  //             <div
-  //               key={index}
-  //               data-aos="fade-up" // AOS animation
-  //               className="p-6 bg-[#2a2a5f] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-  //             >
-  //               <h3 className="text-xl font-semibold">{edu.institution}</h3>
-  //               <p className="text-[#fcfcfd] opacity-90">{edu.degree}</p>
-  //               <p className="text-[#fcfcfd] opacity-80">{edu.duration}</p>
-  //               <p className="mt-2 text-[#fcfcfd] opacity-80">
-  //                 <strong>Courses:</strong> {edu.courses}
+//             <div
+//               key={index}
+//               data-aos="fade-up" // AOS animation
+//               className="p-6 bg-[#2a2a5f] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+//             >
+//               <h3 className="text-xl font-semibold">{edu.institution}</h3>
+//               <p className="text-[#fcfcfd] opacity-90">{edu.degree}</p>
+//               <p className="text-[#fcfcfd] opacity-80">{edu.duration}</p>
+//               <p className="mt-2 text-[#fcfcfd] opacity-80">
+//                 <strong>Courses:</strong> {edu.courses}
 //               </p>
 //               <p className="text-[#fcfcfd] opacity-80">
 //                 <strong>Location:</strong> {edu.location}
@@ -96,14 +96,14 @@ const Education = () => {
 
     },
   ];
-  
+
   return (
-    <section id="education" className="text-[#231e45] bg-[#fcfcfd] py-12">
+    <section id="education" className="text-[#fcfcfd] py-12 relative z-10">
       <div className="container mx-auto px-4">
 
         <div className='mb-10 w-3/4 mx-auto'>
-            <h1 className="text-3xl font-bold text-center mb-10" data-aos="fade-down">Let Me Introduce Myself</h1>
-            <p className='text-lg text-center text-semibold text-wrap' data-aos="fade-down"> Hello! I'm Muskan, I recently graduated as a software engineer and I'm eager to kickstart my career in the tech industry. With a strong foundation in frontend development and a passion for solving complex problems</p>
+          <h1 className="text-3xl font-bold text-center mb-10" data-aos="fade-down">Let Me Introduce Myself</h1>
+          <p className='text-lg text-center text-semibold text-wrap' data-aos="fade-down"> Hello! I'm Muskan, I recently graduated as a software engineer and I'm eager to kickstart my career in the tech industry. With a strong foundation in frontend development and a passion for solving complex problems</p>
         </div>
 
         <h2 className="text-3xl font-bold text-center mb-10" data-aos="fade-down">
@@ -124,7 +124,7 @@ const Education = () => {
               className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center w-full mb-8`}
               data-aos="fade-up"
               data-aos-delay={index * 200}
-              
+
             >
               {/* Timeline dot */}
               <div className="hidden sm:block w-6 h-6 bg-[#3a3a6f] rounded-full z-10 "></div>

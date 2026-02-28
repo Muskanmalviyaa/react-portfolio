@@ -26,7 +26,7 @@ function Contact() {
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-3xl font-bold mb-5"
+        className="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#938bd1] to-[#ffffff] text-center mb-10"
       >
         Contact Me
       </motion.h2>
